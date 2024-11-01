@@ -1,0 +1,58 @@
+{
+	"apiVersion": 2,
+	"name": "tiles/progress",
+	"title": "Progress Bar",
+	"category": "design",
+	"description": "Use the Tiles progress bar to show how far along a process is.",
+        "keywords": [ "tiles", "progress", "bar", "stats" ],
+	"textdomain": "tiles-progress-block",
+        "attributes": {
+                "label": {
+			"type": "string",
+			"source": "html",
+			"selector": ".wp-block-tiles-progress__label",
+			"default": ""
+		},
+		"percentage": {
+			"type": "string",
+			"source": "html",
+			"selector": ".wp-block-tiles-progress__percentage",
+			"default": "60%"
+		},
+                "height": {
+			"type": "number"
+		},
+                "radius": {
+			"type": "number"
+		},
+                "color": {
+			"type": "string"
+		},
+		"customColor": {
+			"type": "string"
+		},
+                "barColor": {
+			"type": "string"
+		},
+                "customBarColor": {
+			"type": "string"
+		}
+	},
+        "supports": {
+		"align": [ "wide", "full" ],
+		"html": false,
+                "fontSize": true
+	},
+        "styles": [
+		{
+			"name": "default",
+			"label": "Default",
+			"isDefault": true
+		},
+		{ "name": "percent-side", "label": "Percent Side" },
+		{ "name": "no-percent", "label": "No Percent" }
+	],
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
